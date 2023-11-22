@@ -66,8 +66,7 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/public/'),
           to: path.resolve(__dirname, 'dist/'),
-          globOptions: {
-          },
+          globOptions: {},
         },
       ],
     }),
@@ -94,5 +93,9 @@ module.exports = {
       ],
     }),
     new BundleAnalyzerPlugin(),
+    ...(process.env.NODE_ENV === 'production' ? [new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    })] : []),
   ],
 };
