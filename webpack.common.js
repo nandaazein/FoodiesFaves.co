@@ -99,10 +99,14 @@ module.exports = {
     })] : []),
   ],
 });
-process.env.NODE_ENV === 'production' && new BundleAnalyzerPlugin({
+new BundleAnalyzerPlugin(),
+    ...(process.env.NODE_ENV === 'production' ? [new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
-    }),
+    })] : []),
+    ...(process.env.NODE_ENV === 'production' ? [new BundleAnalyzerPlugin({
+      analyzerMode: 'static',
+      openAnalyzer: false,
+    })] : []),
   ].filter(Boolean),
-};
 };
