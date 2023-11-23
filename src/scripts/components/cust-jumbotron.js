@@ -101,7 +101,7 @@ class Jumbotron extends HTMLElement {
             </style>
             <div class="jumbotron">
               <picture>
-                <source media="(max-width: 600px)" srcset="./images/hero-image_2-large.jpg"><img src='./images/hero-image_2-large.jpg' alt="Hero Images">
+                <source media="(max-width: 600px)" srcset="./images/hero-image_2-small.jpg"><img src='./images/hero-image_2-large.jpg' alt="Hero Images">
               </picture>
               <div class="centered-content">
                 <h1>Welcome to FoodiesFaves.co</h1>

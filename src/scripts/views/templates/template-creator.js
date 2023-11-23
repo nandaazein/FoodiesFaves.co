@@ -15,8 +15,8 @@ const createRestaurantItem = (restaurant) => {
   restaurantElement.innerHTML = `
     <div class="resto-item">
       <div class="resto-item__header">
-        <img class="resto-item-image lazyload"  alt="${restaurant.name}"
-          src="${imageUrl}">
+        <img class="resto-item-image lazyload" alt="${restaurant.name}"
+        data-src="${imageUrl}">
       </div>
       <div class="resto-item-content">
         <p class="resto-title"><a href="/#/detail/${restaurant.id}">${restaurant.name}</a></p>
